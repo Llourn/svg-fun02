@@ -1,0 +1,129 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background: rgb(215, 234, 255);
+    height: 25vh;
+    width: 100vw;
+    text-align: center;
+}
+
+svg {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 20%;
+    display: inline-block;
+}
+
+g {
+    margin: 0;
+    padding: 0;
+}
+
+#coding.bg-change {
+    animation: bgToPurple 0.7s;
+    animation-fill-mode: forwards;
+}
+
+#message.bg-change {
+    animation: bgToPurple 0.7s;
+    animation-fill-mode: forwards;
+}
+
+#app-development.bg-change {
+    animation: bgToPurple 0.7s;
+    animation-fill-mode: forwards;
+}
+
+#coding-cover {
+    fill-opacity: 100%;    
+}
+
+#coding-cover.off {
+    animation: reveal 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+#content-cover {
+    fill-opacity: 100%;    
+}
+
+#content-cover.off {
+    animation: reveal 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+
+#top-message {
+    fill-opacity: 0%;
+}
+
+#top-message.on {
+    transform: translateX(10px);
+    animation: instantiate 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+}
+
+#bottom-message {
+    fill-opacity: 0%;
+}
+
+#bottom-message.on {
+    transform: translateX(-10px);
+    animation: instantiate 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+
+#laptop-cover {
+    fill-opacity: 100%;
+}
+
+#laptop-cover.off {
+    animation: reveal 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+
+#phone-cover {
+    fill-opacity: 100%;
+}
+
+#phone-cover.off {
+    animation: reveal 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes reveal {
+    to {
+        fill-opacity: 10%;
+    }
+}
+
+@keyframes instantiate {
+    to {
+        transform: translateY(0);
+        fill-opacity: 100%;
+    }
+}
+
+@keyframes bgToPurple {
+    to {
+        background: rgba(128, 0, 128, 0.158);
+    }
+}
+
+
+
+

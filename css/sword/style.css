@@ -1,0 +1,125 @@
+.light-bulb {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.light-lines {
+    fill: yellow;
+}
+
+.right-side > path {
+    animation: moveRightSide 1.6s ease infinite;
+}
+
+.right-side > path:nth-child(even) {
+    fill-opacity: 20%;
+    fill: rgb(255, 251, 0);
+    animation-delay: 0.8s;
+}
+
+.left-side > path {
+    animation: moveLeftSide 1.6s ease infinite;
+}
+
+.left-side > path:nth-child(even) {
+    fill-opacity: 20%;
+    fill: rgb(255, 251, 0);
+    animation-delay: 0.8s;
+}
+
+.gear {
+    fill: rgb(150, 85, 85);
+}
+
+.disabled {
+    stroke: none;
+}
+
+.gear-on {
+    stroke-linecap: round;
+    stroke-dasharray: 171.66;
+    stroke-dashoffset: 171.66;
+    stroke: rgb(255, 0, 0);
+    stroke-width: 0.5px;
+    animation: outlineGear 1s;
+    animation-fill-mode: forwards;
+}
+
+.background {
+    fill: lightgreen
+}
+
+.sword-active{
+    animation: pullSword 2s ;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.sword > path#tip {
+    fill:rgb(187, 187, 187);
+}
+
+.sword > path#right-blade {
+    fill:rgb(168, 168, 168);
+}
+
+.sword > path#left-blade {
+    fill:rgb(214, 214, 214);
+}
+
+.sword > path#guard {
+    fill: rgb(43, 43, 161);
+}
+
+.sword > path#handle {
+    fill: rgb(23, 23, 59);
+    transform: scaleX(.8) scaleY(7.5) translateY(-50.5px) translateX(7.9px);
+}
+
+@keyframes outlineGear {
+    to {
+        stroke-dashoffset: 0;
+        fill:black;
+    }
+}
+
+@keyframes moveRightSide {
+    0% {
+        transform: translateX(0);
+        fill-opacity: 20%;
+    }
+    50% {
+        transform: translateX(2px);
+        fill-opacity: 100%;
+    }
+    100% {
+        transform: translateX(0);
+        fill-opacity: 20%;
+    }
+}
+
+@keyframes moveLeftSide {
+    0% {
+        transform: translateX(0);
+        fill-opacity: 20%;
+    }
+    50% {
+        transform: translateX(-2px);
+        fill-opacity: 100%;
+    }
+    100% {
+        transform: translateX(0);
+        fill-opacity: 20%;
+    }
+}
+
+@keyframes pullSword {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(25px);
+    }
+}
