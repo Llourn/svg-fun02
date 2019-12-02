@@ -23,9 +23,25 @@ svg {
     display: inline-block;
 }
 
+svg > * {
+    vertical-align: middle;
+}
+
 g {
     margin: 0;
     padding: 0;
+}
+
+#coding {
+    background: rgb(246, 250, 255);
+}
+
+#message {
+    background: rgb(246, 250, 255);
+}
+
+#app-development {
+    background: rgb(246, 250, 255);
 }
 
 #coding.bg-change {
